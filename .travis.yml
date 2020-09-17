@@ -1,0 +1,24 @@
+language: java
+# use Java 11
+jdk:
+  - oraclejdk11
+
+branches: 
+  - master 
+  - developer
+
+# see https://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure
+sudo: false
+
+script: 
+- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+# - mvn test -B
+# - Dmaven.javadoc.skip=true
+
+notifications:
+  email: carlos.junior@aluno.uepb.edu.br
+# cache the build tool's caches
+cache:
+  directories:
+  - $HOME/.m2
+  - $HOME/.gradle
