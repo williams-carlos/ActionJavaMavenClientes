@@ -5,8 +5,8 @@ jdk:
 
 branches: 
   only:
-  - gh-pages
-  - /.*/ 
+  - master
+  - developer 
   
 
 # see https://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure
